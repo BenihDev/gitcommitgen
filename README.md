@@ -2,6 +2,8 @@
 
 AI-powered conventional commit message generator. Analyzes your staged git changes and generates clean, meaningful commit messages.
 
+> **gitcommitgen is a free, open-source CLI tool by [BenihKode](https://www.benihkode.web.id/tools/gitcommitgen/)** — a solo developer studio that ships small, focused dev tools. Full docs, examples, and the rest of the toolset live at [benihkode.web.id](https://www.benihkode.web.id/tools/).
+
 ## Why?
 
 Writing good commit messages is tedious. Let AI do it. Just stage your changes and run `gitcommitgen`.
@@ -76,6 +78,16 @@ git commit -m "$(gitcommitgen)"
 | OpenAI    | gpt-4o-mini         | `OPENAI_API_KEY`     |
 | Anthropic | claude-haiku-4-5    | `ANTHROPIC_API_KEY`  |
 
+## Links
+
+- **Website & docs:** [benihkode.web.id/tools/gitcommitgen](https://www.benihkode.web.id/tools/gitcommitgen/)
+- **All BenihKode tools:** [benihkode.web.id/tools](https://www.benihkode.web.id/tools/)
+- **Build story:** [Building gitcommitgen](https://www.benihkode.web.id/blog/building-gitprgen/)
+
 ## License
 
 MIT
+
+---
+
+Part of the [BenihKode](https://www.benihkode.web.id) developer toolset.
