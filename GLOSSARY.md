@@ -16,9 +16,17 @@ _Avoid_: backend, adapter, client, model
 The string a user sets in config or `--provider` to name a `Provider` in the registry — e.g. `ollama`, `groq`, `openrouter`. Resolves to a base URL and whether an API key is required; it is not itself the base URL.
 _Avoid_: provider type, vendor, endpoint
 
+**Preset**:
+The built-in defaults a `Provider name` points at: its base URL, whether it requires an API key, and (when it has one) a default model. Overrides sit on top of presets; a preset is never the base URL itself.
+_Avoid_: profile, template, built-in, provider type
+
 **Provider config**:
 The value handed to a provider factory: `baseURL`, `apiKey`, `model`, `systemPrompt`. `model` is a free-form string naming the model, never an enum.
 _Avoid_: options, settings, credentials
+
+**Resolution**:
+Picking the final field value by precedence — CLI flag, then config file, then `Preset` default, then the program's own constant.
+_Avoid_: merging, cascading, inheritance
 
 **Message**:
 The conventional-commit text (`type(scope): description` plus optional body) that the orchestrator yields after sanitising provider output.
