@@ -28,6 +28,14 @@ _Avoid_: options, settings, credentials
 Picking the final field value by precedence — CLI flag, then config file, then `Preset` default, then the program's own constant.
 _Avoid_: merging, cascading, inheritance
 
+**Unit layer**:
+Tests that replace `fetch` with a stub and never touch the network; they run anywhere, in CI, without a key.
+_Avoid_: mocked tests, offline tests, fast tests
+
+**Local layer**:
+Tests that call a real model server on `localhost` (an Ollama or LM Studio instance) and skip by default when none answers.
+_Avoid_: integration tests, e2e tests, smoke tests
+
 **Message**:
 The conventional-commit text (`type(scope): description` plus optional body) that the orchestrator yields after sanitising provider output.
 _Avoid_: response, output, completion
