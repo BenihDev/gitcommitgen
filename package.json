@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "tsx --test --tsconfig tsconfig.json \"src/**/*.test.ts\""
   },
   "repository": {
     "type": "git",

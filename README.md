@@ -78,6 +78,18 @@ git commit -m "$(gitcommitgen)"
 | OpenAI    | gpt-4o-mini         | `OPENAI_API_KEY`     |
 | Anthropic | claude-haiku-4-5    | `ANTHROPIC_API_KEY`  |
 
+## Development
+
+```bash
+npm install
+npm run dev     # run the CLI from source
+
+npm test        # run the test suite
+npm run build   # type-check and emit dist/
+```
+
+Tests use Node's built-in test runner through `tsx`; no separate test framework is installed and none is needed. Test files sit beside the code they cover and are named `*.test.ts`. Suites that require a real local model server are named `*.integration.test.ts`, skip by default, and opt in with `GITCOMMITGEN_LOCAL_TESTS=1`.
+
 ## Links
 
 - **Website & docs:** [benihkode.web.id/tools/gitcommitgen](https://www.benihkode.web.id/tools/gitcommitgen/)
